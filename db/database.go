@@ -54,7 +54,7 @@ func GetDB() *database {
 }
 
 func GetClient() *mongo.Client {
-	if db == nil {
+	if dbClient == nil {
 		err := errors.New("database client not found")
 		errorhandler.LogErrorThenPanic(&err)
 	}
